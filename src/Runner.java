@@ -1,4 +1,4 @@
-import java.util.Arrays;
+import java.lang.reflect.Array;
 
 public class Runner {
     public static void main (String[] args){
@@ -7,8 +7,9 @@ public class Runner {
         goodies.addOrder(new CookieOrder("Shortbread", 5));
         goodies.addOrder(new CookieOrder("Macaroon", 2));
         goodies.addOrder(new CookieOrder("Chocolate Chip", 3));
-        System.out.println(Arrays.toString(goodies));
+        goodies.print();
         System.out.println(goodies.removeVariety("Chocolate Chip"));
-        System.out.println(Arrays.toString(goodies));
+        goodies.print();
+        System.out.println("Total Boxes: " + goodies.getTotalBoxes());
     }
 }

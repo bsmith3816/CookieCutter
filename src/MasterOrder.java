@@ -38,4 +38,14 @@ public class MasterOrder
         }
         return sum;
     }
+
+    public void print()
+    {
+        String output = "";
+        for(int i = 0; i < orders.size(); i++)
+        {
+            output += "[" + orders.get(i).getVariety() + ", " + orders.get(i).getNumBoxes() + "] ";
+        }
+        System.out.println(output);
+    }
 }
